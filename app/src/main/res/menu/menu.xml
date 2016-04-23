@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/id_promeniPozadinu"
+        android:title="@string/promeni_pozadinu">
+
+        <menu>
+            <item android:id="@+id/id_plava"
+                  android:title="@string/plava_boja"/>
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/id_promeniSlova"
+        android:title="@string/promeni_slova">
+
+        <menu>
+            <item android:id="@+id/id_casualFont"
+                  android:title="@string/casual_font"
+                  android:checkable="true"
+                  android:checked="true"/>
+
+            <item android:id="@+id/id_cursiveFont"
+                  android:title="@string/cursive_font"
+                  android:checkable="true"/>
+
+            <item android:id="@+id/id_monospaceFont"
+                  android:title="@string/monospace_font"
+                  android:checkable="true"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--CASUAL FONT THEME-->
+    <style name="AppThemeCasualFont" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/casualStyleTextView</item>
+        <item name="android:buttonStyle">@style/casualStyleButton</item>
+    </style>
+
+    <style name="casualStyleTextView" parent="android:Widget.TextView">
+        <item name="android:fontFamily">casual</item>
+    </style>
+
+    <style name="casualStyleButton" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <!--CURSIVE FONT THEME-->
+    <style name="AppThemeCursiveFont" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/cursiveStyleTextView</item>
+        <item name="android:buttonStyle">@style/cursiveStyleButton</item>
+    </style>
+
+    <style name="cursiveStyleTextView" parent="android:Widget.TextView">
+        <item name="android:fontFamily">cursive</item>
+    </style>
+
+    <style name="cursiveStyleButton" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <!--MONOSPACE FONT THEME-->
+    <style name="AppThemeMonospaceFont" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/monospaceStyleTextView</item>
+        <item name="android:buttonStyle">@style/monospaceStyleButton</item>
+    </style>
+
+    <style name="monospaceStyleTextView" parent="android:Widget.TextView">
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="monospaceStyleButton" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+</resources>

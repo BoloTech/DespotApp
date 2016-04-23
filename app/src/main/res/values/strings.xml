@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Perionica Despot</string>
+    <string name="title">Auto Perionica Despot</string>
+    <string name="novo_pranje_btn">Novo pranje</string>
+    <string name="lista_pranja_btn">Lista pranja</string>
+    <string name="izvod_zarade">Izvod zarade</string>
+    <string name="promeni_slova">Promeni font</string>
+    <string name="promeni_pozadinu">Promeni pozadinu</string>
+    <string name="plava_boja">Plava</string>
+    <string name="podesavanja">Podešavanja</string>
+    <string name="casual_font">Casual font</string>
+    <string name="cursive_font">Cursive</string>
+    <string name="monospace_font">Monospace</string>
+</resources>
