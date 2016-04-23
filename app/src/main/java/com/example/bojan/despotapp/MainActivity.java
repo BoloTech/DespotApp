@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.id_promeniPozadinu:
-
                 return true;
 
             case R.id.id_casualFont:
@@ -59,9 +58,7 @@ public class MainActivity extends AppCompatActivity {
     protected void removeSelection()
     {
         for (int i = 0; i < mMenu.getItem(1).getSubMenu().size(); i++)
-        {
             mMenu.getItem(1).getSubMenu().getItem(i).setChecked(false);
-        }
     }
 
     @Override
