@@ -1,5 +1,6 @@
 package com.example.bojan.despotapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /* Remove selection item in menu list */
     protected void removeSelection()
     {
         for (int i = 0; i < mMenu.getItem(1).getSubMenu().size(); i++)
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
+
         mMenu = menu;
         return true;
     }
@@ -76,16 +79,16 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(R.string.podesavanja);
 
-//        Novo pranje.
+//       New Wash
         mNewWashBtn = (Button) findViewById(R.id.id_newWashBtn);
         mNewWashBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startAnotherActivity(NewWashActivity.class);
             }
         });
 
-//        Lista pranja.
+//       Wash List
         mWashListBtn = (Button) findViewById(R.id.id_washListBtn);
         mWashListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        Izvod zarade
+//       Salary list
         mSalaryListBtn = (Button) findViewById(R.id.id_salaryListBtn);
         mSalaryListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,5 +105,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    protected void startAnotherActivity(Class activity)
+    {
+        Intent intent = new Intent(MainActivity.this, activity);
+        startActivity(intent);
     }
 }

@@ -11,4 +11,31 @@
     <string name="casual_font">Casual font</string>
     <string name="cursive_font">Cursive</string>
     <string name="monospace_font">Monospace</string>
+    <string name="unesi_reg_oznaku">Unesite registarsku oznaku:</string>
+    <string name="izaberite_vrstu_posla">Izaberite vrstu posla:</string>
+    <string name="unesite_cenu_posla">Unesite cenu posla:</string>
+
+    <string-array name="tip_vozila">
+        <item>Auto</item>
+        <item>Karavan</item>
+        <item>Dzip</item>
+        <item>Motor</item>
+    </string-array>
+
+    <string-array name="vrste_pranja">
+        <item>Komplet pranje bez voska.</item>
+        <item>Komplet pranje sa voskom.</item>
+        <item>Unutrašnje pranje.</item>
+        <item>Spoljašnje pranje.</item>
+        <item>Puškiranje</item>
+    </string-array>
+
+    <string-array name="cene_pranje">
+        <item>400</item>
+        <item>500</item>
+        <item>200</item>
+        <item>200</item>
+        <item>200</item>
+        <item>2000</item>
+    </string-array>
 </resources>
