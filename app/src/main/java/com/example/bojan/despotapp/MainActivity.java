@@ -1,6 +1,7 @@
 package com.example.bojan.despotapp;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -19,6 +20,16 @@ public class MainActivity extends AppCompatActivity {
     private Button mSalaryListBtn;
 
     @Override
+    protected void onApplyThemeResource(Resources.Theme theme, int resid, boolean first) {
+        super.onApplyThemeResource(theme, resid, first);
+        if (!first)
+        {
+            setContentView(R.layout.activity_main);
+            setUpListeners();
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
@@ -30,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 item.setChecked(true);
 
                 setTheme(R.style.AppThemeCasualFont);
-                setContentView(R.layout.activity_main);
                 Toast.makeText(MainActivity.this, "Casual font set", Toast.LENGTH_SHORT).show();
                 return true;
 
@@ -39,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 item.setChecked(true);
 
                 setTheme(R.style.AppThemeCursiveFont);
-                setContentView(R.layout.activity_main);
                 Toast.makeText(MainActivity.this, "Cursive font set", Toast.LENGTH_SHORT).show();
                 return true;
 
@@ -48,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 item.setChecked(true);
 
                 setTheme(R.style.AppThemeMonospaceFont);
-                setContentView(R.layout.activity_main);
                 Toast.makeText(MainActivity.this, "Monospace font set", Toast.LENGTH_SHORT).show();
 
             default:
@@ -79,7 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(R.string.podesavanja);
 
-//       New Wash
+        setUpListeners();
+    }
+
+    protected void setUpListeners()
+    {
+        //       New Wash
         mNewWashBtn = (Button) findViewById(R.id.id_newWashBtn);
         mNewWashBtn.setOnClickListener(new View.OnClickListener() {
             @Override

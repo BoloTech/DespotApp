@@ -12,12 +12,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/unesi_reg_oznaku"
-        android:editable="false"/>
+        android:text="@string/unesi_reg_oznaku"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="textCapCharacters"
+        android:maxLines="1"
+        android:id="@+id/id_registerNumber"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,10 +58,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/id_price"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="number"
+            android:id="@+id/id_price"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/id_price"
+            android:text="din."/>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,8 +84,9 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sačuvaj"
-            android:background="@drawable/buttons_skin"/>
+            android:text="@string/sacuvaj"
+            android:background="@drawable/buttons_skin"
+            android:id="@+id/id_saveBtn"/>
     </LinearLayout>
 
 </LinearLayout>
