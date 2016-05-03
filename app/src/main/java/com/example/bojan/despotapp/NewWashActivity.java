@@ -58,6 +58,7 @@ public class NewWashActivity extends AppCompatActivity {
                         if (databaseHelper.insertData(mRegisterNumber.getText().toString(), mPriceEditText.getText().toString()) != -1)
                         {
                             Toast.makeText(NewWashActivity.this, R.string.uspešno_sačuvano, Toast.LENGTH_LONG).show();
+                            onBackPressed();
                         }
                         else
                         {

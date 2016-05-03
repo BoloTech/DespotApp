@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/id_promeniPozadinu"
-        android:title="@string/promeni_pozadinu">
-
-        <menu>
-            <item android:id="@+id/id_plava"
-                  android:title="@string/plava_boja"/>
-        </menu>
-    </item>
-
 
     <item
         android:id="@+id/id_promeniSlova"

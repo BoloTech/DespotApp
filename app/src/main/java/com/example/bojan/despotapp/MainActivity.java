@@ -33,9 +33,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
-            case R.id.id_promeniPozadinu:
-                return true;
-
             case R.id.id_casualFont:
                 removeSelection();
                 item.setChecked(true);
@@ -67,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     /* Remove selection item in menu list */
     protected void removeSelection()
     {
-        for (int i = 0; i < mMenu.getItem(1).getSubMenu().size(); i++)
-            mMenu.getItem(1).getSubMenu().getItem(i).setChecked(false);
+        for (int i = 0; i < mMenu.getItem(0).getSubMenu().size(); i++)
+            mMenu.getItem(0).getSubMenu().getItem(i).setChecked(false);
     }
 
     @Override
@@ -120,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected void startAnotherActivity(Class activity)
+    public void startAnotherActivity(Class activity)
     {
         Intent intent = new Intent(MainActivity.this, activity);
         startActivity(intent);
