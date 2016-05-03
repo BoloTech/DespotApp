@@ -6,4 +6,5 @@ package com.example.bojan.despotapp;
 public class Constants {
 
     public static String EMPTY_STRING = "";
+    public static String COMMA = ",";
 }

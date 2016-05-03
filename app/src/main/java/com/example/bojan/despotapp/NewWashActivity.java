@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import database.DatabaseHelper;
 
 public class NewWashActivity extends AppCompatActivity {
 
@@ -47,17 +50,25 @@ public class NewWashActivity extends AppCompatActivity {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(NewWashActivity.this);
                 alertDialog.setTitle("Da li želite da sačuvate ?");
                 alertDialog.setMessage("Registarska oznaka: " + mRegisterNumber.getText().toString() + "\n" +
-                                        "Cena: " + mPriceEditText.getText().toString() + R.string.din);
+                                        "Cena: " + mPriceEditText.getText().toString() + "din.");
                 alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+                        if (databaseHelper.insertData(mRegisterNumber.getText().toString(), mPriceEditText.getText().toString()) != -1)
+                        {
+                            Toast.makeText(NewWashActivity.this, R.string.uspešno_sačuvano, Toast.LENGTH_LONG).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(NewWashActivity.this, R.string.nije_uspešno_sačuvano, Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
                 alertDialog.setNegativeButton(R.string.otkazi, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        // nothing happen...
                     }
                 });
                 alertDialog.show();

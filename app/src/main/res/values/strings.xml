@@ -18,6 +18,8 @@
     <string name="ok">Ok</string>
     <string name="otkazi">Otkaži</string>
     <string name="din">din.</string>
+    <string name="uspešno_sačuvano">Uspešno sačuvano!</string>
+    <string name="nije_uspešno_sačuvano">Nije uspešno sačuvano. Pokušajte ponovo!</string>
 
     <string-array name="tip_vozila">
         <item>Auto</item>
