@@ -34,8 +34,7 @@ public class NewWashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_wash_layout);
 
-        getSupportActionBar().setTitle(Constants.EMPTY_STRING);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Utils.setBackButtonOnActionBar(getSupportActionBar());
 
         mChooseWash = (Spinner) findViewById(R.id.id_chooseWash);
         mChooseTypeVehicle = (Spinner) findViewById(R.id.id_typeVehicle);
@@ -55,7 +54,7 @@ public class NewWashActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
-                        if (databaseHelper.insertData(mRegisterNumber.getText().toString(), mPriceEditText.getText().toString()) != -1)
+                        if (databaseHelper.insertData(mRegisterNumber.getText().toString(), mPriceEditText.getText().toString() + "din.") != -1)
                         {
                             Toast.makeText(NewWashActivity.this, R.string.uspešno_sačuvano, Toast.LENGTH_LONG).show();
                             onBackPressed();

@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         mWashListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startAnotherActivity(ListWashActivity.class);
             }
         });
 
