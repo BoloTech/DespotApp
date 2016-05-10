@@ -8,16 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppThemeCasualFont">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                    android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".NewWashActivity">
+        <activity android:name=".NewWashActivity"
+                    android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ListWashActivity">
+        <activity android:name=".ListWashActivity"
+                    android:screenOrientation="portrait">
         </activity>
     </application>
 
