@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.bojan.despotapp.ListWashActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pretraži"
+        android:inputType="textCapCharacters"
+        android:id="@+id/id_search"/>
 
     <ListView
         android:layout_width="match_parent"
