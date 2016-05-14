@@ -1,2 +1,5 @@
 # Release file #
 *.apk
+
+# Folders @
+build/
