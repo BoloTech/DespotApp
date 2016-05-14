@@ -33,8 +33,18 @@ public class ListWashActivity extends AppCompatActivity {
         mSearch = (EditText) findViewById(R.id.id_search);
         mSearch.addTextChangedListener(new TextWatcher() {
             @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                     mCustomBaseAdapter.getFilter().filter(mSearch.getText());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
 
